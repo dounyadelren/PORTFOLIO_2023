@@ -1,6 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from "../src/components/Navbar.vue"
+import Sidebar from "../src/components/Sidebar.vue"
+import AOS from 'aos';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  AOS.init()
+})
 </script>
 
 <template>
@@ -8,9 +15,9 @@ import Navbar from "../src/components/Navbar.vue"
     <div class="wrapper">
       <nav>
         <Navbar />
-        <!-- <RouterLink to="/">Home</RouterLink> -->
       </nav>
     </div>
   </header>
+  <Sidebar />
   <RouterView />
 </template>
