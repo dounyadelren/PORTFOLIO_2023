@@ -1,7 +1,85 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted, reactive } from "vue";
+import Bloc from "../components/Bloc.vue";
+import Web from "../assets/img/web.svg";
+import Ui from "../assets/img/ui.svg";
+
+onMounted(() => {});
+
+const webProjects = reactive([
+  {
+    id: "projects",
+    title: "Mes projets web",
+    img: Web,
+    class: "purple-bloc",
+    duration: "1000",
+    projects: [
+      {
+        date: "2023",
+        name: "Camping vs Wild",
+        route: "/",
+        techno: "Vue JS, Ruby On Rails",
+      },
+      {
+        date: "2022",
+        name: "Previously On",
+        route: "/",
+        techno: "React JS, Express",
+      },
+      {
+        date: "2022",
+        name: "Mak'o - projet e-commerce",
+        route: "/",
+        techno: "React JS, Symphony",
+      },
+      { date: "2021", name: "Ancien portfolio", route: "/", techno: "React JS" },
+      {
+        date: "2021",
+        name: "Snapchat",
+        route: "/",
+        techno: "React Native, Expo",
+      },
+      { date: "2021", name: "Twitter", route: "/", techno: "PHP, JQuery" },
+    ],
+  },
+]);
+
+const uiProjects = reactive([
+  {
+    id: "ui",
+    title: "Mes conceptions ui",
+    img: Ui,
+    class: "blue-bloc",
+    duration: "1500",
+    projects: [
+      { date: "2023", name: "Rocket Feed", route: "/", techno: "Figma" },
+      { date: "2023", name: "Ce portfolio", route: "/", techno: "Figma" },
+      {
+        date: "2022",
+        name: "Glassmorphism",
+        route: "/",
+        techno: "Figma, Youtube",
+      },
+      {
+        date: "2022",
+        name: "Toggle light/dark",
+        route: "/",
+        techno: "Figma, Youtube",
+      },
+      {
+        date: "2022",
+        name: "Mak'o - Projet e-commerce",
+        route: "/",
+        techno: "Figma",
+      },
+      { date: "2021", name: "Omega Gaming", route: "/", techno: "Figma" },
+    ],
+  },
+]);
+</script>
 
 <template>
-  <main class="container mx-auto" style="margin-top: -150px">
+  <main class="container mx-auto" style="margin-top: -130px">
     <div class="row mb-2">
       <div class="col-5">
         <h1 class="letter-space-2 text-orange font-50 bold mb-1">Hello,</h1>
@@ -23,27 +101,11 @@
       </div>
     </div>
     <div class="row">
-      <a class="text-navy font-weight-600"><u>Télécharger mon cv 🔥</u></a>
+      <a class="text-navy font-weight-600 link"><u>Télécharger mon cv 🔥</u></a>
     </div>
     <div class="row">
-      <div
-        data-aos="slide-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        class="purple-bloc mt-1"
-      >
-        <h1><i>Mes projets web</i></h1>
-        <img class="img-class" src="../assets/img/web.svg" />
-      </div>
-      <div
-        class="blue-bloc mt-2"
-        data-aos="slide-up"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      >
-        <img class="img-class" src="../assets/img/ui.svg" />
-        <h1><i>Mes conceptions UI</i></h1>
-      </div>
+      <Bloc :test="webProjects" />
+      <Bloc :test="uiProjects" />
     </div>
   </main>
 </template>
