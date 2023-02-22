@@ -85,7 +85,7 @@ const uiProjects = reactive([
 
 <template>
   <main>
-    <div class="container mx-auto" style="margin-top: -10px">
+    <div class="container mx-auto">
       <div class="row">
         <div class="col-5">
           <h1 class="letter-space-2 text-purple font-50 bold mb-1">Hello,</h1>
@@ -103,37 +103,39 @@ const uiProjects = reactive([
             >
           </div>
           <div class="row not-opaque">
-            <div
-              data-aos="zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="130"
-            >
-              <img class="mr-1 tiny-logo" src="../assets/img/figma.svg" />
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="120"
-            >
-              <img class="mr-1 tiny-logo" src="../assets/img/vue.svg" />
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="110"
-            >
-              <img class="mr-1 tiny-logo" src="../assets/img/css.svg" />
-            </div>
-            <div
-              data-aos="zoom-in"
-              data-aos-easing="ease-in-back"
-              data-aos-delay="100"
-            >
-              <img class="mr-1 tiny-logo" src="../assets/img/procreate.svg" />
+            <div class="col-12 d-flex flex-row">
+              <div
+                data-aos="zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="130"
+              >
+                <img class="me-1 tiny-logo" src="../assets/img/figma.svg" />
+              </div>
+              <div
+                data-aos="zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="120"
+              >
+                <img class="me-1 tiny-logo" src="../assets/img/vue.svg" />
+              </div>
+              <div
+                data-aos="zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="110"
+              >
+                <img class="me-1 tiny-logo" src="../assets/img/css.svg" />
+              </div>
+              <div
+                data-aos="zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="100"
+              >
+                <img class="me-1 tiny-logo" src="../assets/img/procreate.svg" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-5 ml-5">
+        <div class="col-5 ms-5">
           <div
             class="bg-blob"
             data-aos="fade-zoom-out"
@@ -149,7 +151,7 @@ const uiProjects = reactive([
       <div class="blur"></div>
     </div>
     <div
-      class="row justify-center"
+      class="row justify-content-center"
       style="margin-top: -100px"
       data-aos="fade-down"
       data-aos-delay="300"

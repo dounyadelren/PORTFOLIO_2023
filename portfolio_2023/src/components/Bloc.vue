@@ -29,7 +29,7 @@ const displayProject = () => {
   <Collapse :when="isDropped" class="v-collapse w-100">
     <ul :class="(props.test[0].id === 'projects' ? 'bg-purple' : 'bg-blue') + ' list-collapsed mx-auto'">
       <li
-        class="list-item d-flex justify-between align-items-center"
+        class="list-item d-flex justify-content-between align-items-center"
         v-for="project in props.test[0].projects"
         :key="project.name"
       >
