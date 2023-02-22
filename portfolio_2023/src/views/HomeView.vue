@@ -87,15 +87,15 @@ const uiProjects = reactive([
   <main>
     <div class="container mx-auto">
       <div class="row">
-        <div class="col-5">
+        <div class="col-4 offset-md-2" style="max-height: 359px">
           <h1 class="letter-space-2 text-purple font-50 bold mb-1">Hello,</h1>
           <h2 class="font-weight-400 letter-space-1 mb-1">
             Je m'appelle Dounya,
           </h2>
           <h3 class="font-weight-400 letter-space-0 mb-2">
             je suis
-            <span class="text-dark font-weight-600">développeuse web</span> et
-            <span class="text-dark font-weight-600">UX/UI designer</span>
+            <span class="text-darkpurple font-weight-600">développeuse web</span> et
+            <span class="text-darkpurple font-weight-600">UX/UI designer</span>
           </h3>
           <div class="row">
             <a class="text-green font-weight-600 link"
@@ -135,7 +135,7 @@ const uiProjects = reactive([
             </div>
           </div>
         </div>
-        <div class="col-5 ms-5">
+        <div class="col-4" style="max-height: 359px">
           <div
             class="bg-blob"
             data-aos="fade-zoom-out"
@@ -145,24 +145,19 @@ const uiProjects = reactive([
             data-aos-duration="6000"
           ></div>
         </div>
+        <div class="col-12">
+          <div class="bg-orange">
+            <div class="blur"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="bg-orange">
-      <div class="blur"></div>
+    <div class="row justify-content-center align-items-center m-3" data-aos="fade-down" data-aos-delay="500">
+      <img id="arrow" src="../assets/img/arrow.png" />
     </div>
-    <div
-      class="row justify-content-center"
-      style="margin-top: -100px"
-      data-aos="fade-down"
-      data-aos-delay="300"
-    >
-      <img height="70px" src="../assets/img/arrow.png" />
-    </div>
-    <div class="container mx-auto">
-      <div class="row" style="top: -15%; position: relative">
-        <Bloc :test="webProjects" />
-        <Bloc :test="uiProjects" />
-      </div>
+    <div class="row justify-content-center mx-auto align-items-center">
+      <Bloc :test="webProjects" />
+      <Bloc :test="uiProjects" />
     </div>
   </main>
 </template>
