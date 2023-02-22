@@ -22,7 +22,7 @@ a {
   --green: #2A8553;
   --lightblue: rgba(181, 211, 237, 0.30);
   --lightpurple: rgba(198, 153, 250, 0.12);
-  --darkpurple: #5c11b3;
+  --darkpurple: #620EC3;
 }
 
 /* Nav */
@@ -74,7 +74,7 @@ a {
 
 .purple-bloc {
   background: var(--lightpurple);
-  max-width: 800px;
+  max-width: 820px;
   height: 150px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -87,7 +87,7 @@ a {
 
 .blue-bloc {
   background: var(--lightblue);
-  max-width: 800px;
+  max-width: 820px;
   height: 150px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -110,10 +110,12 @@ a {
 
 .bg-purple {
   background: var(--lightpurple);
+  max-width: 820px;
 }
 
 .bg-blue {
   background: var(--lightblue);
+  max-width: 820px;
 }
 
 .bg-orange {
@@ -196,8 +198,12 @@ a {
   font-size: 50px;
 }
 
-.font-weight-400 {
-  font-weight: 400;
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-300 {
+  font-weight: 300;
 }
 
 .font-weight-600 {

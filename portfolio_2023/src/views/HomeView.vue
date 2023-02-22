@@ -8,7 +8,7 @@ onMounted(() => {});
 
 const webProjects = reactive([
   {
-    id: "projects",
+    id: "web",
     title: "Mes projets web",
     img: Web,
     class: "purple-bloc",

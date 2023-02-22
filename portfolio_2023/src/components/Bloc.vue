@@ -13,7 +13,8 @@ const displayProject = () => {
 };
 </script>
 <template>
-  <div
+  <a
+    :href="'/projects/' + props.test[0].id"
     :id="props.test[0].id"
     data-aos="slide-up"
     data-aos-easing="linear"
@@ -21,12 +22,13 @@ const displayProject = () => {
     :data-aos-duration="props.test[0].duration"
     :class="props.test[0].class + ' mt-4 cursor col-12'"
   >
-    <h1 @click="displayProject" class="font-weight-400 font-30">
-      {{ props.test[0].title }}
+    <h1 @click="displayProject" class="font-30">
+      <span class="font-weight-bold">{{ props.test[0].title.substr(0, 1) }}</span>
+      <span class="font-weight-300">{{ props.test[0].title.substr(1) }}</span>
     </h1>
     <img class="img-class" :src="props.test[0].img" />
-  </div>
-  <Collapse :when="isDropped" class="v-collapse w-100">
+  </a>
+  <Collapse :when="isDropped" class="v-collapse">
     <ul
       :class="
         (props.test[0].id === 'projects' ? 'bg-purple' : 'bg-blue') +
@@ -55,7 +57,6 @@ const displayProject = () => {
   padding-left: 4rem;
   padding-right: 4rem;
   margin-top: 0.5rem;
-  /* background: var(--lightpurple); */
   border-radius: 10px;
 }
 
