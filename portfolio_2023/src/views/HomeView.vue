@@ -12,7 +12,7 @@ const webProjects = reactive([
     title: "Mes projets web",
     img: Web,
     class: "purple-bloc",
-    duration: "1000",
+    duration: "700",
     projects: [
       {
         date: "2023",
@@ -32,7 +32,12 @@ const webProjects = reactive([
         route: "/",
         techno: "React JS, Symphony",
       },
-      { date: "2021", name: "Ancien portfolio", route: "/", techno: "React JS" },
+      {
+        date: "2021",
+        name: "Ancien portfolio",
+        route: "/",
+        techno: "React JS",
+      },
       {
         date: "2021",
         name: "Snapchat",
@@ -50,7 +55,7 @@ const uiProjects = reactive([
     title: "Mes conceptions ui",
     img: Ui,
     class: "blue-bloc",
-    duration: "1500",
+    duration: "1000",
     projects: [
       { date: "2023", name: "Rocket Feed", route: "/", techno: "Figma" },
       { date: "2023", name: "Ce portfolio", route: "/", techno: "Figma" },
@@ -79,33 +84,83 @@ const uiProjects = reactive([
 </script>
 
 <template>
-  <main class="container mx-auto" style="margin-top: -130px">
-    <div class="row mb-2">
-      <div class="col-5">
-        <h1 class="letter-space-2 text-orange font-50 bold mb-1">Hello,</h1>
-        <h2 class="font-weight-400 letter-space-1 mb-1">
-          Je m'appelle Dounya,
-        </h2>
-        <h3 class="font-weight-400 letter-space-0 mb-2">
-          je suis
-          <span class="text-navy font-weight-600">développeuse web</span> et
-          <span class="text-navy font-weight-600">UX/UI designer</span>
-        </h3>
-        <img class="mr-1 tiny-logo" src="../assets/img/figma.svg" />
-        <img class="mr-1 tiny-logo" src="../assets/img/vue.svg" />
-        <img class="mr-1 tiny-logo" src="../assets/img/css.svg" />
-        <img class="mr-1 tiny-logo" src="../assets/img/procreate.svg" />
-      </div>
-      <div class="col-5 ml-5">
-        <div class="bg-blob"></div>
+  <main>
+    <div class="container mx-auto" style="margin-top: -10px">
+      <div class="row">
+        <div class="col-5">
+          <h1 class="letter-space-2 text-purple font-50 bold mb-1">Hello,</h1>
+          <h2 class="font-weight-400 letter-space-1 mb-1">
+            Je m'appelle Dounya,
+          </h2>
+          <h3 class="font-weight-400 letter-space-0 mb-2">
+            je suis
+            <span class="text-dark font-weight-600">développeuse web</span> et
+            <span class="text-dark font-weight-600">UX/UI designer</span>
+          </h3>
+          <div class="row">
+            <a class="text-green font-weight-600 link"
+              ><u>Télécharger mon cv 🔥</u></a
+            >
+          </div>
+          <div class="row not-opaque">
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="130"
+            >
+              <img class="mr-1 tiny-logo" src="../assets/img/figma.svg" />
+            </div>
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="120"
+            >
+              <img class="mr-1 tiny-logo" src="../assets/img/vue.svg" />
+            </div>
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="110"
+            >
+              <img class="mr-1 tiny-logo" src="../assets/img/css.svg" />
+            </div>
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="100"
+            >
+              <img class="mr-1 tiny-logo" src="../assets/img/procreate.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="col-5 ml-5">
+          <div
+            class="bg-blob"
+            data-aos="fade-zoom-out"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="1000"
+            data-aos-offset="0"
+            data-aos-duration="6000"
+          ></div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <a class="text-navy font-weight-600 link"><u>Télécharger mon cv 🔥</u></a>
+    <div class="bg-orange">
+      <div class="blur"></div>
     </div>
-    <div class="row">
-      <Bloc :test="webProjects" />
-      <Bloc :test="uiProjects" />
+    <div
+      class="row justify-center"
+      style="margin-top: -100px"
+      data-aos="fade-down"
+      data-aos-delay="300"
+    >
+      <img height="70px" src="../assets/img/arrow.png" />
+    </div>
+    <div class="container mx-auto">
+      <div class="row" style="top: -15%; position: relative">
+        <Bloc :test="webProjects" />
+        <Bloc :test="uiProjects" />
+      </div>
     </div>
   </main>
 </template>

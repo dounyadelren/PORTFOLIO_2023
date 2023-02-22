@@ -17,8 +17,9 @@ const displayProject = () => {
     :id="props.test[0].id"
     data-aos="slide-up"
     data-aos-easing="linear"
+		data-aos-once="true"
     :data-aos-duration="props.test[0].duration"
-    :class="props.test[0].class + ' mt-1 cursor row'"
+    :class="props.test[0].class + ' mt-2 cursor row'"
   >
     <h1 @click="displayProject">
       <i>{{ props.test[0].title }}</i>
