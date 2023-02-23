@@ -4,7 +4,7 @@
   <div>
     <nav class="navbar font-12">
       <div class="">
-        <a href="#" ><img src="../assets/img/LogoDD.png" class="logo-class" /></a>
+        <a href="/" ><img src="../assets/img/LogoDD.png" class="logo-class" /></a>
       </div>
 
       <div class="d-flex align-items-center cursor menu-container justify-content-around">
@@ -19,3 +19,5 @@
     </nav>
   </div>
 </template>
+<style>
+</style>

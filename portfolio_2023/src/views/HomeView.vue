@@ -89,13 +89,13 @@ const uiProjects = reactive([
       <div class="row">
         <div class="col-4 offset-md-2" style="max-height: 359px">
           <h1 class="letter-space-2 text-purple font-50 bold mb-1">Hello,</h1>
-          <h2 class="font-weight-400 letter-space-1 mb-1">
+          <h2 class="font-weight-300 letter-space-1 mb-1 text-secondary">
             Je m'appelle Dounya,
           </h2>
-          <h3 class="font-weight-400 letter-space-0 mb-2">
+          <h3 class="font-weight-300 letter-space-0 mb-2 text-secondary">
             je suis
-            <span class="text-darkpurple font-weight-600">développeuse web</span> et
-            <span class="text-darkpurple font-weight-600">UX/UI designer</span>
+            <span class="text-purple font-weight-600">développeuse web</span> et
+            <span class="text-purple font-weight-600">UX/UI designer</span>
           </h3>
           <div class="row">
             <a class="text-green font-weight-600 link"

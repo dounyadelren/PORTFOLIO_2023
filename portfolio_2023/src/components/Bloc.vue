@@ -1,20 +1,43 @@
 <script setup>
-import { ref } from "vue";
-import { Collapse } from "vue-collapsed";
+import { ref, onMounted } from "vue";
+import Loader from "../components/Loader.vue"
+import { useRoute } from "vue-router";
+import router from '../router'
 
+const isLoading = ref(false)
+const isDone = ref(false)
+const route = useRoute()
 const props = defineProps({
   test: Array,
 });
-
 const isDropped = ref(false);
 
 const displayProject = () => {
   isDropped.value = !isDropped.value;
 };
+
+const redirect = (route) => {
+  setTimeout(() => {
+    isLoading.value = true
+    isDone.value = true
+  }, 1000)
+  setTimeout(() => {
+    if (isDone.value === true) {
+      isLoading.value = false
+      router.push('/projects/' + route)
+    }
+  }, 4000)
+}
+
+onMounted(()=> {
+  console.log(isLoading.value)
+})
 </script>
 <template>
-  <a
-    :href="'/projects/' + props.test[0].id"
+  <Loader v-if="isLoading" />
+  <div
+    v-else
+    @click="redirect(props.test[0].id)"
     :id="props.test[0].id"
     data-aos="slide-up"
     data-aos-easing="linear"
@@ -22,50 +45,12 @@ const displayProject = () => {
     :data-aos-duration="props.test[0].duration"
     :class="props.test[0].class + ' mt-4 cursor col-12'"
   >
-    <h1 @click="displayProject" class="font-30">
+    <h1 @click="displayProject" class="font-30 text-secondary">
       <span class="font-weight-bold">{{ props.test[0].title.substr(0, 1) }}</span>
       <span class="font-weight-300">{{ props.test[0].title.substr(1) }}</span>
     </h1>
     <img class="img-class" :src="props.test[0].img" />
-  </a>
-  <Collapse :when="isDropped" class="v-collapse">
-    <ul
-      :class="
-        (props.test[0].id === 'projects' ? 'bg-purple' : 'bg-blue') +
-        ' list-collapsed mx-auto'
-      "
-    >
-      <li
-        class="list-item d-flex justify-content-between align-items-center"
-        v-for="project in props.test[0].projects"
-        :key="project.name"
-      >
-        <a :href="props.test[0].route">{{
-          project.date + " - " + project.name
-        }}</a>
-        <p class="font-12">{{ project.techno }}</p>
-      </li>
-    </ul>
-  </Collapse>
+  </div>
 </template>
 <style scoped>
-.v-collapse {
-  transition: height var(--vc-auto-duration) cubic-bezier(0.33, 1, 0.68, 1);
-}
-.list-collapsed {
-  padding: 0.5rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  margin-top: 0.5rem;
-  border-radius: 10px;
-}
-
-.list-collapsed .list-item {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.list-collapsed .list-item:hover {
-  color: var(--orange);
-}
 </style>
