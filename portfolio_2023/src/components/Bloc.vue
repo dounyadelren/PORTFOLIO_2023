@@ -30,7 +30,6 @@ const redirect = (route) => {
 }
 
 onMounted(()=> {
-  console.log(isLoading.value)
 })
 </script>
 <template>

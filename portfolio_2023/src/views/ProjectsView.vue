@@ -7,7 +7,6 @@ const route = useRoute();
 
 onMounted(() => {
   type.value = route.params.type;
-  console.log(type.value);
 });
 </script>
 <template>
